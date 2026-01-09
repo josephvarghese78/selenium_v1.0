@@ -1,0 +1,83 @@
+{
+    "txt_name": {
+        "text": "",
+        "innertext": "",
+        "tag": "input",
+        "attrs": {
+            "id": "name",
+            "name": "name",
+            "type": "text"
+        },
+        "parent": {
+            "innertext": "Name: \n\nEmail: \n\nAge: \n\n",
+            "tag": "form",
+            "attrs": {}
+        },
+        "precedingsibling": {
+            "innertext": "Name:",
+            "tag": "label",
+            "attrs": {
+                "for": "name"
+            }
+        },
+        "followingsibling": {
+            "innertext": "",
+            "tag": "br",
+            "attrs": {}
+        }
+    },
+    "txt_email": {
+        "text": "",
+        "innertext": "",
+        "tag": "input",
+        "attrs": {
+            "id": "email",
+            "name": "email",
+            "type": "text"
+        },
+        "parent": {
+            "innertext": "Name: \n\nEmail: \n\nAge: \n\n",
+            "tag": "form",
+            "attrs": {}
+        },
+        "precedingsibling": {
+            "innertext": "Email:",
+            "tag": "label",
+            "attrs": {
+                "for": "email"
+            }
+        },
+        "followingsibling": {
+            "innertext": "",
+            "tag": "br",
+            "attrs": {}
+        }
+    },
+    "txt_age": {
+        "text": "",
+        "innertext": "",
+        "tag": "input",
+        "attrs": {
+            "id": "age",
+            "name": "age",
+            "type": "text"
+        },
+        "parent": {
+            "innertext": "Name: \n\nEmail: \n\nAge: \n\n",
+            "tag": "form",
+            "attrs": {}
+        },
+        "precedingsibling": {
+            "innertext": "Age:",
+            "tag": "label",
+            "attrs": {
+                "for": "Age"
+            }
+        },
+        "followingsibling": {
+            "innertext": "",
+            "tag": "br",
+            "attrs": {}
+        }
+    }
+}

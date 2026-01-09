@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>sample project - Test Report</title>
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body data-theme="dark">
+
+<!-- LEFT SIDEBAR -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo" ><img src="../static/selenium.jpg"/ width=100% height=100%></div>
+    <div>
+      <div class="project">sample project</div>
+      <div class="small muted">QA</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input id="searchBox" placeholder="Search tests..." oninput="onSearch()">
+    <div class="filters">
+      <select id="statusFilter" onchange="onFilterChange()">
+        <option value="ALL">All statuses</option>
+        <option value="PASS">Passed</option>
+        <option value="FAIL">Failed</option>
+        <option value="SKIP">Skipped</option>
+      </select>
+
+      <select id="authorFilter" onchange="onFilterChange()" hidden>
+        <option value="ALL">All authors</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button onclick="showSummary()">Summary</button>
+      <!--<button onclick="toggleTheme()" id="themeBtn">Toggle Theme</button>
+      <button onclick="exportReport()">Export HTML</button>-->
+    </div>
+  </div>
+
+  <div class="test-list" id="testList">
+    <!-- test items injected here -->
+  </div>
+
+  <footer class="sidebar-foot">
+    <div class="small muted">Generated: 2026-01-08 22:00:22</div>
+  </footer>
+</aside>
+
+<!-- RIGHT PANE -->
+<main class="main">
+  <section id="rightContent">
+    <!-- Summary loads by default -->
+  </section>
+</main>
+
+<script>
+/* Data injected by Jinja2 */
+const TESTS = {"case1": {"id": "case1", "name": "case1", "author": "josephv", "suite": "gpt", "start": "2026-01-08 22:00:13", "status": "PASS", "steps": [{"step_name": "Load Test Page", "author": "josephv", "status": "PASS", "start": "22:00:13", "end": "22:00:16", "duration": "00:00:03", "message": "", "trace": ""}, {"step_name": "type in name", "author": "josephv", "status": "PASS", "start": "22:00:16", "end": "22:00:19", "duration": "00:00:02", "message": "", "trace": ""}, {"step_name": "type in age", "author": "josephv", "status": "PASS", "start": "22:00:19", "end": "22:00:22", "duration": "00:00:02", "message": "", "trace": ""}], "end": "2026-01-08 22:00:22", "duration": "00:00:09"}, "case2": {"id": "case2", "name": "case2", "author": "josephv", "suite": "gpt", "start": "2026-01-08 22:00:13", "status": "PASS", "steps": [{"step_name": "Load Test Page", "author": "josephv", "status": "PASS", "start": "22:00:13", "end": "22:00:16", "duration": "00:00:03", "message": "", "trace": ""}, {"step_name": "type in name", "author": "josephv", "status": "PASS", "start": "22:00:16", "end": "22:00:19", "duration": "00:00:02", "message": "", "trace": ""}, {"step_name": "type in email", "author": "josephv", "status": "PASS", "start": "22:00:19", "end": "22:00:22", "duration": "00:00:02", "message": "", "trace": ""}], "end": "2026-01-08 22:00:22", "duration": "00:00:09"}};
+const SUMMARY = {"total": 2, "passed": 2, "failed": 0, "skipped": 0, "pass_percent": 100.0, "duration": "00:00:18", "author": "Joseph varghese", "project": "sample project", "env": "QA", "system": "Windows 10", "os": "Windows-10-10.0.26200-SP0", "python": "3.9.5", "generated_at": "2026-01-08 22:00:22"};
+
+/* Build authors list for filter */
+(function initInjectedData(){
+  window._testsArr = TESTS;
+  window._summary = SUMMARY;
+})();
+</script>
+
+<script src="../static/app.js"></script>
+</body>
+</html>

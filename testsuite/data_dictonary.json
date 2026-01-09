@@ -1,0 +1,12 @@
+{
+  "row1":{
+    "name": ["joseph", "muneer", "shilpi"],
+    "age":[50, 25, 32],
+    "email": ["joseph@ml.com", "muneer@ml.com", "shilpi@ml.com"]
+  },
+  "row2": {
+    "name": ["geethika", "swetha", "greg"],
+    "age":[40, 35, 22],
+    "email": ["geethika@ml.com", "swetha@ml.com", "greg@ml.com"]
+  }
+}

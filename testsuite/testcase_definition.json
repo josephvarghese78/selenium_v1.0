@@ -1,0 +1,25 @@
+{
+  "project": "sample project",
+  "author": "Joseph varghese",
+  "env": "QA",
+  "testcase1": {
+        "name": "case1",
+        "suite": "gpt",
+        "skip": false,
+        "steps": [
+          "loadchrome",
+          "enter_name",
+          "enter_age"
+        ]
+    },
+  "testcase2": {
+        "name": "case2",
+        "suite": "gpt",
+        "skip": false,
+        "steps": [
+          "loadedge",
+          "enter_name",
+          "enter_email"
+        ]
+    }
+}

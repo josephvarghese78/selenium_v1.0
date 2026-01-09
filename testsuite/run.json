@@ -1,0 +1,5 @@
+{
+  "testcases": {
+     "group1": ["testcase1", "testcase2"]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "txt_name": {
+    "attrs": {
+      "id": "name"
+    }
+  },
+  "txt_email": {
+    "attrs": {
+      "id": "email"
+    }
+  },
+  "txt_age": {
+    "attrs": {
+      "id": "age"
+    }
+  }
+}

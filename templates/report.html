@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{{ title or "Automation Report" }}</title>
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body data-theme="dark">
+
+<!-- LEFT SIDEBAR -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo" ><img src="../static/selenium.jpg"/ width=100% height=100%></div>
+    <div>
+      <div class="project">{{ summary.project }}</div>
+      <div class="small muted">{{ summary.env }}</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input id="searchBox" placeholder="Search tests..." oninput="onSearch()">
+    <div class="filters">
+      <select id="statusFilter" onchange="onFilterChange()">
+        <option value="ALL">All statuses</option>
+        <option value="PASS">Passed</option>
+        <option value="FAIL">Failed</option>
+        <option value="SKIP">Skipped</option>
+      </select>
+
+      <select id="authorFilter" onchange="onFilterChange()" hidden>
+        <option value="ALL">All authors</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button onclick="showSummary()">Summary</button>
+      <!--<button onclick="toggleTheme()" id="themeBtn">Toggle Theme</button>
+      <button onclick="exportReport()">Export HTML</button>-->
+    </div>
+  </div>
+
+  <div class="test-list" id="testList">
+    <!-- test items injected here -->
+  </div>
+
+  <footer class="sidebar-foot">
+    <div class="small muted">Generated: {{ generated_at }}</div>
+  </footer>
+</aside>
+
+<!-- RIGHT PANE -->
+<main class="main">
+  <section id="rightContent">
+    <!-- Summary loads by default -->
+  </section>
+</main>
+
+<script>
+/* Data injected by Jinja2 */
+const TESTS = {{ tests_json | safe }};
+const SUMMARY = {{ summary_json | safe }};
+
+/* Build authors list for filter */
+(function initInjectedData(){
+  window._testsArr = TESTS;
+  window._summary = SUMMARY;
+})();
+</script>
+
+<script src="../static/app.js"></script>
+</body>
+</html>
